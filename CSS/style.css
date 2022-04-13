@@ -117,7 +117,11 @@ nav ul li a:hover {
     /* position: absolute;
     animation: slider2 1s ease-in; */
 }
-
+footer{
+    box-shadow: 8px 0 8px 0 rgb(218, 73, 16);
+    position: sticky;
+    top: 100%;
+}
 .btn {
     display: flex;
     justify-content: space-between;
