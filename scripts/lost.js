@@ -11,7 +11,7 @@ const showItem = (Item) => {
 }
 
 const fetchLostItems = () => {
-    fetch('http://localhost:3000/api/lost')
+    fetch('http://bhu-haat-api.herokuapp.com/api/lost')
         .then(response => response.json())
         .then(data => data.map(Item => {
                 showItem(Item);
@@ -22,7 +22,7 @@ const fetchLostItems = () => {
 fetchLostItems();
 
 const search = (val)=>{
-    api='http://localhost:3000/api/lost';
+    api='http://bhu-haat-api.herokuapp.com/api/lost';
     if (val!='') {
         api+=`?name=${val}`
     }
