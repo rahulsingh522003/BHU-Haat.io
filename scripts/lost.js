@@ -6,10 +6,11 @@ const showItem = (Item) => {
     img.classList.add('imageContainer');
     div.appendChild(img);
     props = ['name', 'foundBy', 'contact'];
-    props.forEach(element => {
-        div.innerHTML+=`<p>${element}: ${Item[element]}<\p>`;
+    propsTitle = ['Name', 'Found by', 'Contact'];
+    for (let i = 0; i < props.length; i++) {
+        div.innerHTML+=`<p>${propsTitle[i]}: ${Item[props[i]]}<\p>`;
         div.innerHTML+='<br>'
-    });
+    };
     const container=document.getElementById('container');
     container.appendChild(div);
 }
