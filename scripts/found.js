@@ -32,3 +32,9 @@ const submit = async () => {
 document.getElementById('submitButton').addEventListener('click', () => {
     submit();
 });
+
+document.getElementById('close').addEventListener('click', ()=>{
+    setTimeout(() => {
+        location.reload();
+    }, 1000);
+})
