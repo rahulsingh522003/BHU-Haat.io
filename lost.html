@@ -111,7 +111,7 @@
             top: 0;
             width: 120px;
             height: auto;
-            margin: 10px 30px;
+            margin: -10px 30px;
         }
         .logo img{
             width: 100%;
@@ -123,7 +123,6 @@
             top: 0;
             margin: 20px;
             margin-right: 50px;
-            margin-top: 30px;
         }
 
         .btn2 a {
@@ -133,6 +132,80 @@
             padding: 5px 15px;
             border-radius: 10px;
             background-color: rgb(218, 73, 16);
+        }
+
+        .btn2 a:hover {
+            background-color: rgba(218, 73, 16, 0.8);
+        }
+        @media screen and (max-width:1100px) {
+            .navbar{
+                margin-top: 70px;
+            }
+        }
+        @media screen and (max-width:1000px) {
+            .logo{
+                width: 80px;
+                margin: 8px 2px;
+            }
+            .btn2{
+                margin-right: 5px;
+                padding: 4px 8px;
+            }
+            .btn2 a{
+                font-size: 18px;
+            }
+            .navbar .search{
+                width: 44vw;
+            }
+        }
+        @media screen and (max-width:700px) {
+            .logo{
+                width: 70px;
+                margin: 8px 2px;
+            }
+            .btn2{
+                margin-right: 5px;
+                padding: 2px 4px;
+            }
+            .btn2 a{
+                font-size: 16px;
+            }
+            .navbar .search{
+                width: 45vw;
+                height: 28px;
+            }
+            #searchButton{
+                font-size: 10px;
+                padding: 5px;
+            }
+            #searchButton svg{
+                width:20%;
+                height:20%;
+            }
+            .navbar .search input{
+                font-size: 14px;
+            }
+        }
+        @media screen and (max-width:500px) {
+            .logo{
+                width: 60px;
+                margin: 8px 2px;
+            }
+            .btn2{
+                margin-right: 5px;
+                margin-top: 30px;
+                padding: 2px 4px;
+            }
+            .btn2 a{
+                font-size: 12px;
+            }   
+            .navbar .search{
+                width: 60vw;
+            }
+            #searchButton{
+                font-size: 10px;
+                padding: 3px;
+            }
         }
     </style>
 </head>
@@ -179,7 +252,7 @@
                             alt="Linkedin" /></a>
                 </div>
                 <p class="text-center text-secondary border-top border-secondary py-4">
-                    DEVELOPED BY NIKHIL, RAHUL SINGH, MUSHARAF
+                    DEVELOPED BY NIKHIL, RAHUL SINGH, MUSHARRAF
                 </p>
             </div>
     </footer>

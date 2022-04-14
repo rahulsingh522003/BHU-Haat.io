@@ -161,22 +161,13 @@ footer{
     padding: 10px 20px;
     border-radius: 10px;
 }
-@keyframes slider {
-    from{
-        left: -400px;
-    }
-    to{
-        left: auto;
-    }
+.sell:hover, .lost:hover{
+    background-color: rgba(0, 128, 0, 0.7);
 }
-@keyframes slider2{
-    from{
-        right: -400px;
-    }
-    to{
-        right: auto;
-    }
+.found:hover, .purchase:hover{
+    background-color: rgba(255, 0, 0, 0.6);
 }
+
 @media screen and (max-width:1100px) {
     .logo {
         left: 0;
@@ -192,6 +183,7 @@ footer{
     }
     nav h1{
         font-size: 40px;
+        padding-left: 90px;
     }
     nav ul{
         margin-right: 10px;
@@ -203,6 +195,9 @@ footer{
     .card1,.card2{
         height: 380px;
     }
+    ol,ul{
+        padding-left: 0rem;
+    }
 }
 @media screen and (max-width:550px) {
     .logo{
@@ -211,9 +206,13 @@ footer{
     }
     nav h1{
         font-size: 30px;
+        padding-left: 50px;
     }
     nav ul li{
         font-size: 12px;
+    }
+    nav ul{
+        margin-left: none;
     }
     .cards{
         margin-top: 25px;
@@ -239,7 +238,7 @@ footer{
 }
 @media screen and (max-width:400px) {
     .logo{
-        width: 40px;
+        width: 50px;
         height: auto;
     }
     nav h1{
