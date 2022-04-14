@@ -1,6 +1,5 @@
 const submit = async ()=>{
-    console.log('Hi');
-
+    
     const Name = document.getElementById('name').value;
     const foundBy = document.getElementById('foundBy').value;
     const Location = document.getElementById('location').value;
@@ -16,8 +15,6 @@ const submit = async ()=>{
         imageURL: imageURL,
         content: content
     };
-
-    console.log(data);
     
     fetch('https://bhu-haat-api.herokuapp.com/api/lost',{
         method: 'POST',
