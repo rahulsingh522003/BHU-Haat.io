@@ -125,7 +125,7 @@ padding: 50px 50px;
                 padding-left: 18px;
                 padding-right: 18pxpx;
             }
-            .found_container input{
+            .found_container input, .found_container textarea{
                 font-size: 15px;
                 padding: 4px;
             }
@@ -172,10 +172,13 @@ padding: 50px 50px;
               <label for="exampleFormControlTextarea1" class="form-label">Enter product's details</label>
               <textarea class="form-control" id="content" rows="3"></textarea>
             </div>
-            <div class="product_image mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Upload product image here</label>
-                <input type="file" id = "imageURL" accept="image">
-            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Enter the URL of product's image</label>
+                <input class="form-control" id="imageURL" placeholder=" Image URL">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Use <a href="https://imgbb.com/" target="_blank">this website</a> to get URL of an image</label>
+                </div>
             <button class="btn btn-success submit" id="submitButton">Submit</button>
     </div>
     <footer class="bg-black text-light text-center text-md-left">
