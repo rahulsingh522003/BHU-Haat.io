@@ -5,11 +5,12 @@ const showItem = (Item) => {
     img.src=Item.imageURL;
     img.classList.add('imageContainer');
     div.appendChild(img);
-    props = ['name', 'cost', 'contact'];
-    props.forEach(element => {
-        div.innerHTML+=`<p>${element}: ${Item[element]}<\p>`;
+    props = ['name', 'owner', 'cost', 'contact'];
+    propsTitle = ['Name', 'Owner', 'Cost', 'Contact'];
+    for (let i = 0; i < props.length; i++) {
+        div.innerHTML+=`<p>${propsTitle[i]}: ${Item[props[i]]}<\p>`;
         div.innerHTML+='<br>'
-    });
+    };
     const container=document.getElementById('container');
     container.appendChild(div);
 }

@@ -1,12 +1,14 @@
 const submit = async ()=>{
     
     const Name = document.getElementById('name').value;
+    const owner = document.getElementById('owner').value;
     const cost = document.getElementById('cost').value;
     const contact = document.getElementById('contact').value;
     const imageURL = document.getElementById('imageURL').value;
     
     const data = {
         name: Name,
+        owner: owner,
         cost: cost,
         contact: contact,
         imageURL: imageURL,
