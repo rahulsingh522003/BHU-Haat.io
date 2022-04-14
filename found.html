@@ -147,22 +147,17 @@ padding: 50px 50px;
         }
   </style>
   <body>
-    <div class="modal fade" id="submitButton" tabindex="-1" aria-labelledby="submitButtonLabel" aria-hidden="true">
+      <div class="modal fade" id="submitButton" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="submitButtonLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Thank You!!</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h5 class="modal-title" id="staticBackdropLabel">Thank You</h5>
             </div>
             <div class="modal-body">
-              <form>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Your response has been submitted</label>
-                </div>
-              </form>
+              Your response has been recorded
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Close</button>
             </div>
           </div>
         </div>
