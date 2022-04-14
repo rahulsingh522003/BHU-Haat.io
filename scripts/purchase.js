@@ -5,7 +5,7 @@ const showItem = (Item) => {
     img.src=Item.imageURL;
     img.classList.add('imageContainer');
     div.appendChild(img);
-    props = ['name', 'foundBy', 'contact'];
+    props = ['name', 'cost', 'contact'];
     props.forEach(element => {
         div.innerHTML+=`<p>${element}: ${Item[element]}<\p>`;
         div.innerHTML+='<br>'
@@ -15,7 +15,7 @@ const showItem = (Item) => {
 }
 
 const fetchLostItems = () => {
-    fetch('http://bhu-haat-api.herokuapp.com/api/lost')
+    fetch('http://bhu-haat-api.herokuapp.com/api/sell')
         .then(response => response.json())
         .then(data => data.map(Item => {
                 showItem(Item);
@@ -26,7 +26,7 @@ const fetchLostItems = () => {
 fetchLostItems();
 
 const search = (val)=>{
-    api='http://bhu-haat-api.herokuapp.com/api/lost';
+    api='http://bhu-haat-api.herokuapp.com/api/sell';
     if (val!='') {
         api+=`?name=${val}`
     }
@@ -44,7 +44,6 @@ document.getElementById('searchButton').addEventListener('click', ()=>{
 
 document.addEventListener('keydown', (event)=>{
     if (event.key=='Enter') {
-        console.log("Hi");
         document.getElementById('searchButton').click();
     }
 })
