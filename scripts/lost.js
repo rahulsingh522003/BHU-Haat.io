@@ -37,3 +37,10 @@ const search = (val)=>{
 document.getElementById('searchButton').addEventListener('click', ()=>{
     search(document.getElementById('searchBar').value)
 } );
+
+document.addEventListener('keydown', (event)=>{
+    if (event.key=='Enter') {
+        console.log("Hi");
+        document.getElementById('searchButton').click();
+    }
+})
