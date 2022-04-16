@@ -22,17 +22,29 @@ const submit = async () => {
         },
         body: JSON.stringify(data)
     })
-        .then(response => response.json())
-        .then(json => console.log(json))
-        .catch(err => console.log(err));
+        .then(response => {
+            response.json()
+            if (response.ok) {
+                document.getElementById('modal_text').innerText = 'Success';
+                document.getElementById('desc').innerText = 'Your data has been submitted!';
+            }
+            else {
+                document.getElementById('modal_text').innerText = 'Failed!';
+                document.getElementById('desc').innerText = 'Invalid Data! Please try again.';
+            }
+        });
+    return;
 }
 
-document.getElementById('submitButton').addEventListener('click', () => {
-    submit();
-});
+const submitEvent = () => {
+    document.getElementById('submitButton').removeEventListener('click', submitEvent);
+    submit()
+    document.getElementById('modal').style.display = 'block'
+    scrollTo(0, 0);
+}
 
-document.getElementById("close").addEventListener('click', ()=>{
-    setTimeout(() => {
-        location.reload();
-    }, 1000);
+document.getElementById('submitButton').addEventListener('click', submitEvent);
+
+document.getElementById('close').addEventListener('click', () => {
+    location.reload();
 })
