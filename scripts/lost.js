@@ -16,7 +16,7 @@ const showItem = (Item) => {
 }
 
 const fetchLostItems = () => {
-    fetch('http://bhu-haat-api.herokuapp.com/api/lost')
+    fetch('https://bhu-haat-api.onrender.com/api/lost')
         .then(response => response.json())
         .then(data => data.map(Item => {
             showItem(Item);
@@ -27,7 +27,7 @@ const fetchLostItems = () => {
 fetchLostItems();
 
 const search = (val) => {
-    api = 'http://bhu-haat-api.herokuapp.com/api/lost';
+    api = 'https://bhu-haat-api.onrender.com/api/lost';
     if (val != '') {
         api += `?name=${val}`
     }
