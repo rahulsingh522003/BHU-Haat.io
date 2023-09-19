@@ -21,6 +21,58 @@ body {
     height: 100%;
 }
 
+#submitButton {
+    border-radius: 10px;
+    border:transparent;
+}
+
+#modal {
+    max-width: 600px;
+    height: 250px;
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    z-index: 1000;
+    position: relative;
+    display: none;
+}
+
+#modal_text {
+    padding-top: 25px;
+    font-size: 30px;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 25px;
+}
+
+#close {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 4px 15px;
+    border-radius: 12px;
+    background-color: #ee9617;
+    background-image: linear-gradient(315deg, #ee9617 0%, #fe5858 74%);
+    font-size: 20px;
+    color: #fff;
+    margin: 25px;
+}
+
+#close:hover {
+    background-color: #ee9417b5;
+    background-image: linear-gradient(315deg, #ee94178d 0%, #fe5858b4 74%);
+}
+
+#desc {
+    font-size: 25px;
+    padding-top: 5px;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 25px;
+}
+
 .main_line {
     text-align: center;
     color: #fff;
@@ -170,6 +222,29 @@ li:hover {
     .partner_photo {
         border-left: none;
     }
+
+    #modal {
+        width: 80vw;
+        margin-top: 20px;
+    }
+
+    #modal_text {
+        padding-top: 20px;
+        font-size: 20px;
+    }
+
+    #close {
+        font-size: 18px;
+        padding: 4px 8px;
+    }
+
+    #desc {
+        font-size: 18px;
+        padding-top: 5px;
+        color: black;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding-left: 25px;
+    }
 }
 
 @media screen and (max-width:650px) {
@@ -230,5 +305,27 @@ li:hover {
 
     footer a img {
         width: 25px;
+    }
+
+    #modal {
+        width: 95vw;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    #modal_text {
+        font-size: 18px;
+    }
+
+    #close {
+        font-size: 16px;
+    }
+
+    #desc {
+        font-size: 15px;
+        padding-top: 5px;
+        color: black;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding-left: 25px;
     }
 }
